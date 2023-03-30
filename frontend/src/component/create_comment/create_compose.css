@@ -1,0 +1,30 @@
+.create{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.titleCrate{
+   text-align: center;
+}
+
+.createContent{
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+ 
+}
+.between{
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+}
+.inputComment{
+    font-size: 16px;
+    padding: 5px 10px;
+    width: 70%;
+}
+.mv{
+    margin-bottom: 80px;
+}

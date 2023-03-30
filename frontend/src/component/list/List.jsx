@@ -14,13 +14,24 @@ export default function List() {
 			alert("api not responding");
 		}
 	};
-
 	useEffect(() => {
 		fetchData();
 	}, []);
 
+  const delte = (id)=>{
+      const filter = data.filter((e)=> e.id!==id)
+      setData(filter)
+  }
+
+  const update = (id , object)=>{
+    console.log(id , object)
+    const filter = data.map((e)=> {if(e.id!==id){return e}else return object })
+    setData(filter)
+  }
+
+
 	const PostComponents = data?.map((item) => (
-		<Post object={item} key={item.id} />
+		<Post object={item} delte={delte} funUpdate={update} key={item.id} />
 	));
 
 	return (

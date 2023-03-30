@@ -27,6 +27,7 @@ h2 {
 	padding-top: 1rem;
 	min-width: 800px;
 	position: fixed;
+    z-index: 1000;
 	display: flex;
 	justify-content: space-between;
 	border-bottom: 1px solid grey;
@@ -50,6 +51,7 @@ h2 {
 	transition: 0.3s;
 }
 .btn {
+    cursor: pointer;
 	color: white;
 	padding: 10px 15px;
 	background-color: rgb(25, 92, 25);

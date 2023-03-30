@@ -1,0 +1,16 @@
+.name-comment{
+   
+    line-height: 2.0;
+    height: auto;
+    overflow-wrap: break-word;
+}
+
+
+.content-comment{
+    width: 90%;
+    margin-top: 10px;
+ 
+}
+.mv-50{
+    margin-bottom: 50px;
+}

@@ -14,29 +14,84 @@
 	gap: 15px;
 }
 .conpost {
+  
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	width: 100%;
 }
-.delete {
+.right-top {
+
+    padding: 5px 10px;
+    cursor: pointer;
 	position: absolute;
 	top: 15px;
 	right: 15px;
-	z-index: 1000;
 }
 .comment {
 	position: absolute;
 	right: 15px;
 	bottom: 15px;
-	z-index: 1000;
+
 }
 .contentPost {
+    line-height: 2.0;
+     height: auto;
+    overflow-wrap: break-word;
 	margin-bottom: 50px;
 }
 .datePost {
 	position: absolute;
 	bottom: 15px;
 	left: 15px;
-	z-index: 1000;
+
+}
+
+.bin:hover{
+    color: red;
+}
+
+.bin{
+    color: black;
+}
+
+.row{
+ 
+    display: flex;
+    gap: 10px;
+}
+
+.update{
+    cursor: pointer;
+    color: black;
+}
+
+.update:hover{
+    color: rgb(58, 55, 55);
+}
+
+.inputUpdate{
+    overflow: auto;
+    line-height: 2;
+    font-size: 18px;
+    padding: 5px 10px;
+    width: 80%;
+}
+
+.rowinput{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+.form-update{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+.row-update{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

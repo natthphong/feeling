@@ -1,1 +1,6 @@
-export const viewPost = '/post/view'
+export const viewPost = "/post/view"
+export const createPost = "/post/create"
+export const deltePost ="/post/delete"
+export const updatePost ="/post/update"
+export const createComment = "/comment/create"
+export const deletePath = "/comment/delete"

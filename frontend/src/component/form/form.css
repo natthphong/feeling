@@ -1,0 +1,45 @@
+.form-content{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.area-form{
+    margin-top: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.inputtext{
+    font-size: 18px;
+    padding: 10px 15px;
+}
+.content-css{
+    line-height: 2;
+    font-size: 18px;
+    padding: 15px;
+}
+
+.btnNew{
+
+    padding: 10px 15px;
+    cursor: pointer;
+	color: white;
+	padding: 10px 15px;
+	background-color: rgb(25, 92, 25);
+	border: 1px solid rgb(25, 92, 25);
+    text-align: center;
+	font-size: 1.25rem;
+	border-radius: 6px;
+}
+.btnNew:hover {
+	background-color: white;    
+	color: green;
+    padding: 10px 15px;
+	padding: 10px 15px;
+	font-size: 1.25rem;
+	border-radius: 6px;
+	transition: 0.3s;
+}
