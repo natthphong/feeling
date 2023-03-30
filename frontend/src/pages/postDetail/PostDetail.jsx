@@ -2,7 +2,7 @@ import React from 'react'
 import { useLocation } from 'react-router-dom';
 import Comments from '../../component/comment/Comments';
 import Create_comment from '../../component/create_comment/Create_comment';
-import Footer from '../../component/footer/Footer'
+import NewFooter from '../../component/footer/NewFooter';
 import Navbar from '../../component/navbar/Navbar'
 import Post from '../../component/post/Post'
 import './postdetail.css'
@@ -23,7 +23,7 @@ export default function PostDetail() {
   
       <Comments postid={state.id} comments={state.comments}/>
       <Create_comment  id={state.id}/>
-        <Footer/>
+        <NewFooter/>
     </div>
     
   )

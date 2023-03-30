@@ -11,4 +11,4 @@ services:
     build: frontend/
     restart: always
     ports:
-      - "9112:3000"
+      - "3000:3000"

@@ -1,5 +1,5 @@
 import React from "react";
-import Footer from "../../component/footer/Footer";
+import NewFooter from "../../component/footer/NewFooter";
 import List from "../../component/list/List";
 import Navbar from "../../component/navbar/Navbar";
 import "./home.css";
@@ -10,7 +10,7 @@ export default function Home() {
 				<List />
 			</Navbar>
   
-    <Footer/>
+			<NewFooter/>
 
 		</div>
 	);
