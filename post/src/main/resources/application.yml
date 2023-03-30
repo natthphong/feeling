@@ -1,0 +1,7 @@
+server:
+  port: 9111
+spring:
+  data:
+    mongodb:
+      database: posts
+      uri: mongodb+srv://test:test123@cluster0.tf3tvv7.mongodb.net/?retryWrites=true&w=majority

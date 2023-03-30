@@ -1,0 +1,14 @@
+version: '3'
+services:
+  api-backend-spring:
+    container_name: backend-api-spring
+    build: post/
+    restart: always
+    ports:
+      - 9111:9111
+  frontend-react:
+    container_name: frontend-react
+    build: frontend/
+    restart: always
+    ports:
+      - "9112:3000"
