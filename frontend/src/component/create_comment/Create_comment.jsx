@@ -3,7 +3,8 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { createComment } from "../../api/post";
 import "./create_compose.css";
-export default function Create_comment({ id , re }) {
+
+export default function Create_comment({ id, re }) {
   const [comment, setComment] = useState({
     name: "",
     content: "",
@@ -15,17 +16,16 @@ export default function Create_comment({ id , re }) {
 
   const navigator = useNavigate();
   const submitHandle = async (e) => {
-
     try {
-        await axios.post(`${createComment}/${id}`, comment);
+      await axios.post(`${createComment}/${id}`, comment);
     } catch (error) {
-        alert("Create Comment")
+      alert("Create Comment");
     }
-
   };
 
   return (
     <div className="create mv">
+     
       <div className="postCon">
         <div className="titleCrate">
           <h2>แสดงความคิดเห็นของคุณ</h2>
@@ -33,6 +33,7 @@ export default function Create_comment({ id , re }) {
             className="createContent"
             onSubmit={(e) => {
               submitHandle();
+            
               navigator("/");
             }}
           >

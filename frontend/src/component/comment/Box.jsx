@@ -4,8 +4,29 @@ import { IoIosTrash } from "react-icons/io";
 import { deletePath } from "../../api/post";
 import Date_F from "../../until/Date_F";
 import "./box.css";
+import 'react-confirm-alert/src/react-confirm-alert.css'; 
+import { confirmAlert } from 'react-confirm-alert'; 
 export default function Box({ postid, object  , re}) {
-  const deleteComment = async (e) => {
+
+
+  const confirmDelete = () => {
+    confirmAlert({
+      title:  'ลบแล้วมันจะหายไปเลยนะ...',
+      message: 'คุณแน่ใจใช่ไหมที่จะลบความคิดเห็นนี้ ?',
+      buttons: [
+        {
+          label: 'ใช่',
+          onClick: () => deleteComment()
+        },
+        {
+          label: 'ไม่',
+          onClick: () => {}
+        }
+      ]
+    });
+  };
+
+  const deleteComment = async () => {
     try {
       await axios.delete(`${deletePath}/${postid}/${object.id}`);
       re()
@@ -19,7 +40,7 @@ export default function Box({ postid, object  , re}) {
         <IoIosTrash
           size={35}
           className="right-top bin"
-          onClick={deleteComment}
+          onClick={confirmDelete}
         />
         <div className="content-comment">
           <div className="name-comment">

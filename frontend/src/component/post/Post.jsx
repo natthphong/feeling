@@ -5,6 +5,8 @@ import Date_F from "../../until/Date_F";
 import { IoIosTrash, IoMdConstruct } from "react-icons/io";
 import "./post.css";
 import { useNavigate } from "react-router-dom";
+import 'react-confirm-alert/src/react-confirm-alert.css'; 
+import { confirmAlert } from 'react-confirm-alert'; 
 export default function Post({ object, delte, funUpdate, page }) {
   const [update, setUpdate] = useState(false);
   const [post, setPost] = useState(object);
@@ -42,7 +44,23 @@ export default function Post({ object, delte, funUpdate, page }) {
     setPost({ ...post, [e.target.id]: e.target.value });
   };
 
-  const deletePost = async (e) => {
+  const confirmDelete = () => {
+    confirmAlert({
+      title:  'ลบแล้วมันจะหายไปเลยนะ...',
+      message: 'คุณแน่ใจใช่ไหมที่จะลบโพสต์นี้ ?',
+      buttons: [
+        {
+          label: 'Yes',
+          onClick: () => deletePost()
+        },
+        {
+          label: 'No',
+          onClick: () => {}
+        }
+      ]
+    });
+  };
+  const deletePost = async () => {
     try {
       await axios.delete(`${deltePost}/${object.id}`);
       delte(object.id);
@@ -71,7 +89,7 @@ export default function Post({ object, delte, funUpdate, page }) {
             <div className="right-top">
               <div className="row">
                 <IoMdConstruct size={35} className="update" onClick={toggle} />
-                <IoIosTrash size={35} className="bin" onClick={deletePost} />
+                <IoIosTrash size={35} className="bin" onClick={confirmDelete} />
               </div>
             </div>
           )}

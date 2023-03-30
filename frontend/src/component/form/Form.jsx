@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { createPost } from "../../api/post";
+
 import "./form.css";
 export default function Form() {
   const [form, setForm] = useState({
@@ -11,7 +12,12 @@ export default function Form() {
   });
   const navigate = useNavigate();
   const Create = async (e) => {
-    await axios.post(createPost, form);
+    try {
+      await axios.post(createPost, form);
+    } catch (error) {
+      alert("Create Post Fail")
+    }
+   
   };
 
   const handle = (e) => {
@@ -20,11 +26,13 @@ export default function Form() {
 
   return (
     <div className="list-container">
+
       <div className="area-form">
         <form
           className="form-content"
           onSubmit={(e) => {
             Create(e);
+     
             navigate("/");
           }}
         >
