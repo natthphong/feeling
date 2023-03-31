@@ -1,0 +1,49 @@
+.main-message {
+    border: 1px solid grey;
+    overflow: auto;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    height: 400px;
+    width: 300px;
+   
+  }
+  
+  .title-box {
+    
+    text-align: center;
+    width: 100%;
+    padding: 2%;
+    color: black;
+    background-color: #efefef;
+    border-radius: 4px;
+  }
+  
+.bottom {
+    bottom: 10px;
+    position: fixed;
+    right: 10px;
+    width: 300px;
+}
+  
+
+.flex-end{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.flex-start{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.help{
+    border: 1px solid grey;
+    overflow: auto;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 200px;
+}

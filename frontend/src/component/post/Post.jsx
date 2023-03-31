@@ -5,8 +5,8 @@ import Date_F from "../../until/Date_F";
 import { IoIosTrash, IoMdConstruct } from "react-icons/io";
 import "./post.css";
 import { useNavigate } from "react-router-dom";
-import 'react-confirm-alert/src/react-confirm-alert.css'; 
-import { confirmAlert } from 'react-confirm-alert'; 
+import "react-confirm-alert/src/react-confirm-alert.css";
+import { confirmAlert } from "react-confirm-alert";
 export default function Post({ object, delte, funUpdate, page }) {
   const [update, setUpdate] = useState(false);
   const [post, setPost] = useState(object);
@@ -21,7 +21,7 @@ export default function Post({ object, delte, funUpdate, page }) {
         className={page !== "detail" ? "comment btn" : "comment"}
         onClick={one}
       >
-        {page !== "detail" ? "ดูรายละเอียด" : "คุณไม่มีการแสดงความคิดเห็น"}
+        {page !== "detail" ? "ดูรายละเอียด" : "แสดงความคิดเห็นกันเถอะ"}
       </div>
     );
   } else {
@@ -30,9 +30,7 @@ export default function Post({ object, delte, funUpdate, page }) {
         className={page !== "detail" ? "comment btn" : "comment"}
         onClick={one}
       >
-        {page !== "detail"
-          ? "ดูรายละเอียด"
-          : ``}
+        {page !== "detail" ? "ดูรายละเอียด" : `แสดงความคิดเห็นกันเถอะ`}
       </div>
     );
   }
@@ -46,18 +44,18 @@ export default function Post({ object, delte, funUpdate, page }) {
 
   const confirmDelete = () => {
     confirmAlert({
-      title:  'ลบแล้วมันจะหายไปเลยนะ...',
-      message: 'คุณแน่ใจใช่ไหมที่จะลบโพสต์นี้ ?',
+      title: "ลบแล้วมันจะหายไปเลยนะ...",
+      message: "คุณแน่ใจใช่ไหมที่จะลบโพสต์นี้ ?",
       buttons: [
         {
-          label: 'Yes',
-          onClick: () => deletePost()
+          label: "Yes",
+          onClick: () => deletePost(),
         },
         {
-          label: 'No',
-          onClick: () => {}
-        }
-      ]
+          label: "No",
+          onClick: () => {},
+        },
+      ],
     });
   };
   const deletePost = async () => {
